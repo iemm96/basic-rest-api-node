@@ -1,12 +1,12 @@
 const { response } = require('express');
 
-const usuariosDelete = (req, res = response) => {
+const usersDelete = (req, res = response) => {
 
     res.status(403).json({ok:true,msg:'DELETE API - Controller'})
 
 }
 
-const usuariosGet = (req = request, res = response) => {
+const usersGet = (req = request, res = response) => {
     const {query} = req.query;
     res.status(403).json({
         nombre:query,
@@ -15,7 +15,7 @@ const usuariosGet = (req = request, res = response) => {
 
 }
 
-const usuariosPut = (req, res = response) => {
+const usersPut = (req, res = response) => {
     const {id} = req.params.id;
 
     res.status(403).json({
@@ -25,7 +25,7 @@ const usuariosPut = (req, res = response) => {
 
 }
 
-const usuariosPost = (req, res = response) => {
+const usersPost = (req, res = response) => {
     const {nombre,edad} = req.body;
 
     res.json({
@@ -38,8 +38,8 @@ const usuariosPost = (req, res = response) => {
 }
 
 module.exports = {
-    usuariosGet,
-    usuariosDelete,
-    usuariosPost,
-    usuariosPut
+    usersGet,
+    usersDelete,
+    usersPost,
+    usersPut
 }
